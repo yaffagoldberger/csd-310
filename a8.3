@@ -1,0 +1,70 @@
+
+Assignment: PySports: Table Queries
+For this assignment, you will be learning how to query MySQL database tables through the terminal window and a Python program.
+MySQL: Select Query 
+SELECT <column_name>, <column_name> FROM <table_name>;
+Example
+SELECT team_id, team_name, mascot FROM team;
+
+Cursor Example
+cursor = db.cursor()
+
+cursor.execute(“SELECT team_id, team_name, mascot FROM team”)
+
+teams = cursor.fetchall()
+
+for team in teams:
+print(“Team Name: {}”.format(team[1]))
+Instructions
+Create a new file under the module_8 directory and name it pysports_queries.py.
+Write the code to connect to your MySQL pysports database.
+Refer to the previous assignment for code structure.
+You can basically copy/paste the code we used in the previous assignment, assuming you were able to get it to work.
+Write two select queries, one for the team table and one for the player table.
+SELECT team_id, team_name, mascot FROM team.
+Using a for loop, iterate over the cursor and display the results.
+Make sure your output matches the expected output below (this is gradable).
+Expected Output
+TEAM RECORDS
+
+TEAM ID: 001
+TEAM Name: Team YouGo
+Mascot: Cuddly poodles
+
+TEAM ID: 002
+Team Name: Team WeGotThis
+Mascot: Owl
+
+PLAYER RECORDS
+
+PLAYER ID: 01
+First Name: Mike
+Last Name: Jord
+Team ID: 001
+
+PLAYER ID: 02
+First Name: Babe
+Last Name: O'Connor
+Team ID: 001
+
+PLAYER ID: 03
+First Name: Sammy
+Last Name: Hilfiger
+Team ID: 001
+
+PLAYER ID: 04
+First Name: James
+Last Name: Brandi
+Team ID: 002
+
+PLAYER ID: 05
+First Name: Johny
+Last Name: Smith
+Team ID: 002
+
+PLAYER ID: 06
+First Name: Genesha
+Last Name: Klein
+Team ID: 002
+
+
